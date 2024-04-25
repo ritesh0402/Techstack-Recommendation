@@ -4,15 +4,20 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Flask App</title>
+   <title>Tech Stack Recommendation</title>
    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-
 </head>
 
 <body>
-   <h1>Welcome to Flask App</h1>
-   <p>This is the homepage of the Flask app.</p>
-   <a href="/form">Go to Form</a>
+   <div class="container">
+      <h1>Welcome to Tech Stack Recommendation</h1>
+      <p>Are you unsure about which technologies to use for your next project? Let us help you!</p>
+      <p>Our recommendation system analyzes your project requirements and suggests the best technology stack for your
+         needs.</p>
+      <img src="{{ url_for('static', filename='tech-stack.png') }}" alt="Tech Stack" class="tech-stack-image">
+      <p>Click the button below to get started:</p>
+      <a href="/form" class="button">Get Recommendations</a>
+   </div>
 </body>
 
 </html>

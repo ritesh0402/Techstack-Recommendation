@@ -10,8 +10,8 @@ body {
 
 /* Container styles */
 .container {
-   max-width: 400px; /* Adjust width as needed */
-   margin: 0 auto; /* Center horizontally */
+   max-width: 600px;
+   margin: 20px auto;
    padding: 20px;
    background-color: #fff;
    border-radius: 5px;
@@ -50,4 +50,20 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
    background-color: #45a049;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+   .container {
+       max-width: 100%;
+       padding: 10px;
+   }
+   
+   form input[type="number"] {
+       width: calc(100% - 20px);
+   }
+   
+   form button[type="submit"] {
+       width: calc(100% - 20px);
+   }
 }
