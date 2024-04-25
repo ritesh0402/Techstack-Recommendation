@@ -30,7 +30,6 @@ def suggest_tech_stack(df, user_requirements):
       for idx, row in category_df.iterrows():
             score = calculate_score(row.tolist()[2:], user_requirements)
             scores[row['Technology']] = score
-
       top_technologies = sorted(scores, key=scores.get, reverse=True)[:2]
       if top_technologies:
             recommended_tech.append(" or ".join(top_technologies))

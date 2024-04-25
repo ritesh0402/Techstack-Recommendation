@@ -35,7 +35,6 @@ def result():
         'EcosystemSupport': float(request.form['ecosystem']),
         'LongTermSupport': float(request.form['long_term'])
     }
-
     recommended_tech = suggest_tech_stack(df, user_requirements)
 
     return render_template('result.html', recommended_tech=recommended_tech)
