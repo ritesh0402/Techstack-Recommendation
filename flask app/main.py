@@ -1,9 +1,7 @@
 import pandas as pd
-import numpy as np
 
-df = pd.read_csv('data2.csv')
-
-def min_max_scaling(df):
+def min_max_scaling():
+   df = pd.read_csv('data2.csv')
    scaled_df = df.copy()
    for col in df.columns[2:]:
       min_val = df[col].min()
@@ -11,7 +9,7 @@ def min_max_scaling(df):
       scaled_df[col] = (df[col] - min_val) / (max_val - min_val)
    return scaled_df
 
-scaled_df = min_max_scaling(df)
+# scaled_df = min_max_scaling()
 
 
 def calculate_score(tech_requirements, user_requirements):
@@ -228,13 +226,13 @@ def get_user_requirements():
 
    return requirements
 
-user_requirements = get_user_requirements()
+# user_requirements = get_user_requirements()
 
-recommended_tech = suggest_tech_stack(scaled_df, user_requirements)
+# recommended_tech = suggest_tech_stack(scaled_df, user_requirements)
 
-if recommended_tech:
-   print("\nRecommended Tech Stack:")
-   for tech in recommended_tech:
-      print(tech)
-else:
-   print("No technologies match all of the specified requirements.")
+# if recommended_tech:
+#    print("\nRecommended Tech Stack:")
+#    for tech in recommended_tech:
+#       print(tech)
+# else:
+#    print("No technologies match all of the specified requirements.")

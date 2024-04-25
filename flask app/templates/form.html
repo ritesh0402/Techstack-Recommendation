@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+   <div class="container">
+      <h1>Form</h1>
+      <form action="/result" method="post" class="form-grid">
+         <label for="dev_exp">Developer Experience Required (0 to 1):</label>
+         <input type="number" id="dev_exp" name="dev_exp" min="0" max="1" step="0.01" required><br>
+
+         <label for="complexity">Complexity of Project (0 to 1):</label>
+         <input type="number" id="complexity" name="complexity" min="0" max="1" step="0.01" required><br>
+
+         <label for="scale">Project Scale (0 to 1):</label>
+         <input type="number" id="scale" name="scale" min="0" max="1" step="0.01" required><br>
+
+         <label for="performance">Performance of Technology (0 to 1):</label>
+         <input type="number" id="performance" name="performance" min="0" max="1" step="0.01" required><br>
+
+         <label for="community">Community Support (0 to 1):</label>
+         <input type="number" id="community" name="community" min="0" max="1" step="0.01" required><br>
+
+         <label for="scalability">Scalability (0 to 1):</label>
+         <input type="number" id="scalability" name="scalability" min="0" max="1" step="0.01" required><br>
+
+         <label for="security">Security Features (0 to 1):</label>
+         <input type="number" id="security" name="security" min="0" max="1" step="0.01" required><br>
+
+         <label for="cost">Cost (0 to 1):</label>
+         <input type="number" id="cost" name="cost" min="0" max="1" step="0.01" required><br>
+
+         <label for="integration">Integration Capabilities (0 to 1):</label>
+         <input type="number" id="integration" name="integration" min="0" max="1" step="0.01" required><br>
+
+         <label for="documentation">Documentation Quality (0 to 1):</label>
+         <input type="number" id="documentation" name="documentation" min="0" max="1" step="0.01" required><br>
+
+         <label for="learning">Learning Curve (0 to 1):</label>
+         <input type="number" id="learning" name="learning" min="0" max="1" step="0.01" required><br>
+
+         <label for="adoption">Community Adoption (0 to 1):</label>
+         <input type="number" id="adoption" name="adoption" min="0" max="1" step="0.01" required><br>
+
+         <label for="performance_scaling">Performance Scaling (0 to 1):</label>
+         <input type="number" id="performance_scaling" name="performance_scaling" min="0" max="1" step="0.01"
+            required><br>
+
+         <label for="vendor_lockin">Vendor Lock-In (0 to 1):</label>
+         <input type="number" id="vendor_lockin" name="vendor_lockin" min="0" max="1" step="0.01" required><br>
+
+         <label for="ecosystem">Ecosystem Support (0 to 1):</label>
+         <input type="number" id="ecosystem" name="ecosystem" min="0" max="1" step="0.01" required><br>
+
+         <label for="long_term">Long-Term Support (0 to 1):</label>
+         <input type="number" id="long_term" name="long_term" min="0" max="1" step="0.01" required><br>
+
+         <button type="submit">Submit</button>
+      </form>
+   </div>
+</body>
+
+</html>
