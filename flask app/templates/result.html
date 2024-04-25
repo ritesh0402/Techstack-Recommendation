@@ -4,22 +4,28 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
    <title>Result</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
-   <h1>Recommended Technologies</h1>
-   {% if recommended_tech %}
-   <ul>
-      {% for tech in recommended_tech %}
-      <li>{{ tech }}</li>
-      {% endfor %}
-   </ul>
-   {% else %}
-   <p>No technologies match all of the specified requirements.</p>
-   {% endif %}
-   <a href="/">Go back to homepage</a>
+   {% include 'navbar.html' %}
+   <div class="container">
+      <h1>Recommended Tech Stack</h1>
+      <div class="recommendations">
+         {% if recommended_tech %}
+         <p>We recommend using the following technologies for your project:</p>
+         <ul>
+            {% for tech in recommended_tech %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+         </ul>
+         {% else %}
+         <p>No technologies match all of the specified requirements.</p>
+         {% endif %}
+      </div>
+      <a href="/form" class="button">Try Again</a>
+   </div>
 </body>
 
 </html>

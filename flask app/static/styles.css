@@ -8,6 +8,87 @@ body {
    padding: 0;
 }
 
+/* styles.css */
+
+.navbar {
+   background-color: #007bff; /* Navbar background color */
+   color: #fff; /* Navbar text color */
+   padding: 1px 0px; 
+}
+
+.navbar .container {
+   background-color:inherit;
+   display: flex; /* Use flexbox for layout */
+   width: 100vw;
+   margin: 0px auto;
+   justify-content: space-between; /* Align items to each end */
+   align-items: center; /* Vertically center items */
+}
+
+.navbar-title {
+   font-size: 24px; /* Font size of the navbar title */
+   font-weight: bold; /* Bold font weight for the title */
+}
+
+.navbar-menu {
+   list-style: none; /* Remove default list styles */
+   margin: 0; /* Remove default margin */
+   padding: 0; /* Remove default padding */
+   display: flex; /* Display menu items in a row */
+}
+
+.navbar-menu li {
+   margin-right: 20px; /* Add some spacing between items */
+}
+
+.navbar-menu li:last-child {
+   margin-right: 0; /* Remove margin from the last item */
+}
+
+.navbar-menu li a {
+   color: #fff; /* Link text color */
+   text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-menu li a:hover {
+   text-decoration: underline; /* Underline links on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+   .navbar .container {
+       flex-direction: column; /* Stack items vertically on smaller screens */
+       text-align: center; /* Center align text */
+   }
+
+   .navbar-menu {
+       margin-top: 10px; /* Add spacing between title and menu */
+   }
+
+   .navbar-menu li {
+       display: block; /* Display menu items as block elements */
+       margin: 10px 0; /* Add spacing between items */
+   }
+}
+
+
+
+.error-container {
+   max-width: 600px;
+   margin: 20px auto;
+   padding: 40px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+.error-message {
+   font-size: 18px;
+   margin-top: 20px;
+   color: #d9534f; /* Red color for error messages */
+}
+
 /* Container styles */
 .container {
    max-width: 600px;
@@ -51,6 +132,25 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
    background-color: #45a049;
 }
+
+.button {
+   display: inline-block;
+   padding: 12px 24px;
+   font-size: 16px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #fff;
+   background-color: #007bff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.button:hover {
+   background-color: #0056b3;
+}
+
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {

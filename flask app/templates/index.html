@@ -9,12 +9,13 @@
 </head>
 
 <body>
+   {% include 'navbar.html' %}
    <div class="container">
       <h1>Welcome to Tech Stack Recommendation</h1>
       <p>Are you unsure about which technologies to use for your next project? Let us help you!</p>
       <p>Our recommendation system analyzes your project requirements and suggests the best technology stack for your
          needs.</p>
-      <img src="{{ url_for('static', filename='tech-stack.png') }}" alt="Tech Stack" class="tech-stack-image">
+      <!-- <img src="{{ url_for('static', filename='tech-stack.png') }}" alt="Tech Stack" class="tech-stack-image"> -->
       <p>Click the button below to get started:</p>
       <a href="/form" class="button">Get Recommendations</a>
    </div>

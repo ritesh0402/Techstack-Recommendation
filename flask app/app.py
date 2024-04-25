@@ -10,6 +10,12 @@ df = min_max_scaling()
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    error_message = "The page you are trying to access does not exist or the method used is not allowed."
+    return render_template('error.html', error_message=error_message)
+
 
 @app.route('/form')
 def form():
