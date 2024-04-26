@@ -31,7 +31,12 @@
 2. Fill out the form with your requirements for the technology stack.
 3. Submit the form to receive recommendations.
 
-## Screenshots\n\nInclude screenshots or GIFs of the application in action (optional).
+## Screenshots
+![Screenshot 1](Screenshots/HomePage.jpg)
+![Screenshot 2](Screenshots/Form1.jpg)
+![Screenshot 3](Screenshots/Form2.jpg)
+![Screenshot 4](Screenshots/ResultPage.jpg)
+
 
 
 ## Contributing
